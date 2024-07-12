@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header-title">
+            <h1 id="title">Generate a <span class="green-color">random password</span></h1>
+            <p id = "support-title">Never use an insecure password again.</p>
+        </div>
+        <div class="separator"></div>
+        <div id = "password-options">
+            <div id = "length">
+                <label for="password-length">Password Length (19 max):</label>
+                <input type="number" id="password-length" min="5" max="128" value="5">
+            </div>
+            <div id = "uppercase">
+                <input type="checkbox" id="include-uppercase">
+                <label for="include-uppercase">Include Uppercase</label>
+            </div>
+            <div id = "lowercase">
+                <input type="checkbox" id="include-lowercase">
+                <label for="include-lowercase">Include Lowercase</label>
+            </div>
+            <div id = "numbers">
+                <input type="checkbox" id="include-numbers">
+                <label for="include-numbers">Include Numbers</label>
+            </div>
+            <div id = "symbols">
+                <input type="checkbox" id="include-symbols">
+                <label for="include-symbols">Include Symbols</label>
+            </div>
+        </div>
+        <div id="generate-password">
+            <button id="generate-btn" onclick="generatePasswords()">Generate Passwords</button>
+        </div>
+        <div class="separator"></div>
+        <div id="display-password">
+            <div id="first-p">
+                <input type="text" id="first-password" class="pwd-text" readonly value="xd">
+                <button id="copy" class ="btn-copy" onclick="copyPassword('first')">Copy</button>
+            </div>
+            <div id="second-p">
+                <input type="text" id="second-password" class="pwd-text" readonly>
+                <button id="copy" class ="btn-copy" onclick="copyPassword('second')">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
